@@ -91,3 +91,7 @@ address {
 details+details {
     margin-top: calc(var(--flow-space) * 0.5);
 }
+
+summary {
+    cursor: pointer;
+}
