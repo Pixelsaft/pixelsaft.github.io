@@ -1,5 +1,5 @@
 :root {
-    --color-brand: #E50069;
+    --color-brand: #b00051;
     --color-background: white;
     --color-text: black;
     --flow-space: 1rem;
@@ -7,6 +7,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --color-brand: #ff55a3;
         --color-background: black;
         --color-text: white;
     }
