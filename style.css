@@ -1,6 +1,7 @@
 :root {
     --color-brand: #b00051;
     --color-background: white;
+    --color-background-contrast: #efefef;
     --color-text: black;
     --flow-space: 1rem;
 }
@@ -9,6 +10,7 @@
     :root {
         --color-brand: #ff55a3;
         --color-background: black;
+        --color-background-contrast: #595959;
         --color-text: white;
     }
 }
@@ -26,21 +28,21 @@ body {
     color: var(--color-text);
     font-family: monospace;
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.5;
     margin: 0;
     min-height: 100%;
     overflow-wrap: break-word
 }
 
-header > :first-child,
-main > :first-child,
-footer > :first-child {
+header> :first-child,
+main> :first-child,
+footer> :first-child {
     margin-top: 0;
 }
 
-header > :last-child,
-main > :last-child,
-footer > :last-child {
+header> :last-child,
+main> :last-child,
+footer> :last-child {
     margin-bottom: 0;
 }
 
@@ -85,12 +87,21 @@ hr:after {
     content: attr(data-content) "/////"
 }
 
+code {
+    background-color: var(--color-background-contrast);
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 0.95em;
+    padding: 0 0.375em;
+    word-break: break-word;
+}
+
 address {
     font-style: normal;
 }
 
 details+details {
-    margin-top: calc(var(--flow-space) * 0.5);
+    margin-top: calc(var(--flow-space) * 0.75);
 }
 
 summary {
