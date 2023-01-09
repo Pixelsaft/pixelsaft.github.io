@@ -31,14 +31,22 @@ body {
     overflow-wrap: break-word
 }
 
-h1,
-h2 {
-    margin-top: var(--flow-space);
-    margin-bottom: var(--flow-space);
+header > :first-child,
+main > :first-child,
+footer > :first-child {
+    margin-top: 0;
 }
 
-*:not(summary)+h1,
-*:not(summary)+h2 {
+header > :last-child,
+main > :last-child,
+footer > :last-child {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: calc(var(--flow-space) * 2);
     margin-bottom: var(--flow-space);
 }
 
