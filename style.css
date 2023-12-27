@@ -26,65 +26,59 @@ html {
 
 body {
     color: var(--color-text);
-    font-family: monospace;
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
     font-size: 16px;
     line-height: 1.5;
-    margin: 0;
-    min-height: 100%;
-    overflow-wrap: break-word
+    margin-inline: auto;
+    max-inline-size: 480px;
+    min-block-size: 100%;
+    overflow-wrap: break-word;
+    padding-block: 4rem;
+    padding-inline: 2rem;
 }
 
-header> :first-child,
-main> :first-child,
-footer> :first-child {
-    margin-top: 0;
+header>:first-child,
+main>:first-child,
+footer>:first-child {
+    margin-block-start: 0;
 }
 
-header> :last-child,
-main> :last-child,
-footer> :last-child {
-    margin-bottom: 0;
+header>:last-child,
+main>:last-child,
+footer>:last-child {
+    margin-block-end: 0;
 }
 
 h1,
 h2,
 h3 {
-    margin-top: calc(var(--flow-space) * 2);
-    margin-bottom: var(--flow-space);
-}
-
-hr {
-    margin: calc(var(--flow-space) * 2) 0;
+    margin-block-start: calc(var(--flow-space) * 2);
+    margin-block-end: var(--flow-space);
 }
 
 a {
     color: var(--color-brand);
 }
 
+hr {
+    margin-block: calc(var(--flow-space) * 2);
+    border: 0;
+
+    &::before {
+        content: "/////"
+    }
+
+    &::after {
+        content: attr(data-content) "/////"
+    }
+}
+
 p {
-    margin: var(--flow-space) 0;
+    margin-block: var(--flow-space);
 }
 
 li {
-    margin: 0.4rem 0;
-}
-
-body {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-}
-
-hr {
-    border: 0
-}
-
-hr:before {
-    content: "/////"
-}
-
-hr:after {
-    content: attr(data-content) "/////"
+    margin-block: 0.4rem 0;
 }
 
 code {
@@ -92,7 +86,7 @@ code {
     border-radius: 4px;
     display: inline-block;
     font-size: 0.95em;
-    padding: 0 0.375em;
+    padding-inline: 0.375em;
     word-break: break-word;
 }
 
@@ -101,7 +95,7 @@ address {
 }
 
 details+details {
-    margin-top: calc(var(--flow-space) * 0.75);
+    margin-block-start: calc(var(--flow-space) * 0.75);
 }
 
 summary {
