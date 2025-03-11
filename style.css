@@ -29,9 +29,10 @@ body {
     font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
     font-size: 16px;
     line-height: 1.5;
+    margin-block: 0;
     margin-inline: auto;
     max-inline-size: 480px;
-    min-block-size: 100%;
+    min-block-size: calc(100% - 8rem);
     overflow-wrap: break-word;
     padding-block: 4rem;
     padding-inline: 2rem;
